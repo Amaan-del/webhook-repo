@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GitHub Events Feed</title>
+  <style>
+    body { font-family: Arial; margin: 2rem; }
+    .event { padding: 10px; border-bottom: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <h2>GitHub Activity Feed</h2>
+  <div id="events"></div>
+
+  <script>
+    async function fetchEvents() {
+      const res = await fetch("/events");
+      const data = await res.json();
+      document.getElementById("events").innerHTML =
+        data.map(msg => `<div class="event">${msg}</div>`).join("");
+    }
+    fetchEvents();
+    setInterval(fetchEvents, 15000);
+  </script>
+</body>
+</html>
