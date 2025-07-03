@@ -4,7 +4,7 @@ This app listens for GitHub webhook events (`push`, `pull_request`, and `merge`)
 
 ---
 
-## 🔧 Features
+##  Features
 
 - Receives GitHub webhook events via `/webhook`
 - Parses event data (author, branches, timestamp)
@@ -13,7 +13,7 @@ This app listens for GitHub webhook events (`push`, `pull_request`, and `merge`)
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the repo
 ```bash
